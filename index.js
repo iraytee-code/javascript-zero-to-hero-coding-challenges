@@ -1,3 +1,5 @@
+console.log("CODING CHALLENGE 1")
+
 /* 
 Mark and John are trying to compare their BMI (Body Mass Index), which is
 calculated using the formula:
@@ -53,9 +55,98 @@ is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark
 BMI (28.3) is higher than John's (23.9)!"
 Hint: Use an if/else statement */
 
+console.log("CODING CHALLENGE 2")
+
+
 
 if(BMIMark>BMIJohn){
     console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
 } else (
     console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`)
 )
+/*
+Coding Challenge #3
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
+other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score)
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. Hint: Use a logical operator to test for minimum
+score, as well as multiple else-if blocks �
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
+points. Otherwise, no team wins the trophy
+Test data:
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+GOOD LUCK �
+*/
+console.log("CODING CHALLENGE 3");
+
+
+const dolphinsScore = (96 + 108 + 89);
+// const dolphinsScore = (97 + 112 + 101);
+// const dolphinsScore = (97 + 112 + 101);
+
+
+const koalasScore = (88 + 91 + 110);
+// const koalasScore = (109 + 95 + 123);
+// const koalasScore = (109 + 95 + 106);
+
+
+
+
+
+avgDolphinScore = (dolphinsScore/3);
+avgKoalasScore = (koalasScore/3);
+
+console.log(avgDolphinScore, avgKoalasScore);
+
+// if (avgDolphinScore > avgKoalasScore) {
+//     console.log("dolphins are gymnastics champions");
+// } else if (avgDolphinScore < avgKoalasScore) {
+//     console.log("koalas are gymnastics champions");
+// } else{
+//     console.log(`it's a tie`)
+// }
+
+// test results
+
+if (avgDolphinScore > avgKoalasScore && avgDolphinScore >= 100 ) {
+    console.log("dolphins are gymnastics champions");
+} else if (avgDolphinScore < avgKoalasScore && avgKoalasScore >= 100) {
+    console.log("koalas are gymnastics champions");
+} else if (avgKoalasScore === avgDolphinScore && avgKoalasScore >= 100 && avgDolphinScore >= 100 ){
+    console.log(`both team win the trophy`)
+} else if ( (avgKoalasScore <= 100 && avgDolphinScore <= 100) && (avgDolphinScore > avgKoalasScore || avgDolphinScore < avgKoalasScore)) (
+    console.log("both teams did not meet the target")
+)
+
+// MID CHALLENGE
+
+
+
+const day = "monday"; // switch day value to get diffrent results
+
+if(day==="monday"){
+    console.log("plan course structure");
+    console.log("go to coding meetup");
+} else if (day === "tuesday"){
+    console.log("prepare theory videos");
+} else if(day === ("wednesday" || "thursday")){
+    console.log("write code examples");
+} else if (day === "friday") {
+    console.log("record videos");
+} else if (day === ("saturday" || "sunday")){
+    console.log("enjoy the weekend");
+} else {
+    console.log("not a valid day my gee");
+}
+
+
+
